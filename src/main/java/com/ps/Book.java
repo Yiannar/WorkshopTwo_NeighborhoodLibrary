@@ -11,8 +11,8 @@ public Book (long id, String isbn, String title, boolean isCheckedOut, String ch
     this.id = id;
     this.isbn = isbn;
     this.title = title;
-    this.isCheckedOut = false;
-    this.checkedOutTo = null;
+    this.isCheckedOut = isCheckedOut;
+    this.checkedOutTo = checkedOutTo;
 }
 
     public long getId() {
@@ -27,7 +27,7 @@ public Book (long id, String isbn, String title, boolean isCheckedOut, String ch
         return title;
     }
 
-    public Boolean getChekedOut() {
+    public Boolean getIsCheckedOut() {
         return isCheckedOut;
     }
 
@@ -62,7 +62,7 @@ public Book (long id, String isbn, String title, boolean isCheckedOut, String ch
             "id=" + id +
             ", isbn='" + isbn + '\'' +
             ", title='" + title + '\'' +
-            ", checkedOutTo='" + isCheckedOut +
+            ", checkedOut='" + isCheckedOut +
             ", checkedOutTo='" + checkedOutTo + '\'' +
             '}';
     }
