@@ -55,7 +55,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Check out a book");
+//                    System.out.println("Check out a book");
                     showCheckedOutBooks(books);
                     checkInBook(books);
                     break;
@@ -75,8 +75,8 @@ public class Main {
                 do{
                     System.out.println("Please choose from the following options: ");
                     System.out.println("\t1) Check out a book");
-                    System.out.println("\t2 Check in a book");
-                    System.out.println("\t3) go back to Home Screen");
+                    System.out.println("\t2  Check in a book");
+                    System.out.println("\t3) Go back to Home Screen");
 
                     checkOutCommand = scanner.nextInt();
 
@@ -160,6 +160,8 @@ public class Main {
     public static void checkInBook(Book[] books) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to check in your book? (C/X) C-CheckIn X-Home");
+        scanner.nextLine();
+
         String choice = scanner.nextLine().toUpperCase();
 
         if (choice.equals("C")) {
@@ -181,7 +183,6 @@ public class Main {
                     break;
                 }
             }
-//            System.out.println("Book with ID " + bookId + " not found.");
         } else if (choice.equals("X")) {
             System.out.println("Returning to the Home Screen.");
         } else {
